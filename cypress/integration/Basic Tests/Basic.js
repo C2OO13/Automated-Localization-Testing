@@ -14,7 +14,7 @@ lang.forEach((value) => {
     describe('Basic Tests for ' + value, () => {
 
         beforeEach(function () {
-            cy.visit("https://r00tdada.github.io/GEP_Techathon_21/web/Blunders_Pride.html")
+            cy.visit("https://c2oo13.github.io/Automated-Localization-Testing/web/Blunders_Pride.html")
             cy.get('#country').select(value)
             cy.fixture(value.toString().toLowerCase()).then((currentLanguage) => {
                 this.cul = currentLanguage
@@ -49,7 +49,7 @@ lang.forEach((value) => {
             cy.Testing_Project_Category_and_radio(this.cul)
         });
         it('Testing Project Idea Block', function () {
-            cy.Testing_Project_Idea_Block_failed(this.cul)
+            cy.Testing_Project_Idea_Block(this.cul)
         });
         it('Checking Save this information block', function () {
             cy.Checking_Save_this_information_block(this.cul)
